@@ -12,7 +12,7 @@ export class AddPostService {
   }
 
   addPost(postPayload: PostPayload){
-    return this.httpClient.post('http://localhost:8080/api/posts/', postPayload);
+    return this.httpClient.post('http://localhost:8080/api/posts/createPost', postPayload);
   }
 
   getAllPosts(): Observable<Array<PostPayload>>{
