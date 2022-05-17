@@ -36,7 +36,7 @@ import {AuthGuard} from './auth.guard';
     ReactiveFormsModule,
     Ng2Webstorage.forRoot(),
     RouterModule.forRoot([
-      {path: '', component: LoginComponent},
+      {path: '', redirectTo: 'register', pathMatch: 'full'},
       {path: 'register', component: RegisterComponent},
       {path: 'post/:id', component: PostComponent},
       {path: 'login', component: LoginComponent},
