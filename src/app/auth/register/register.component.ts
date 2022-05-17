@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
         username: [null, [Validators.required]],
         email: [null, [Validators.required]],
-        password: [null, [Validators.required]],
+        password: [null, [Validators.required, Validators.minLength(8)]],
         confirmPassword: [null, [Validators.required, Validators.minLength(8)]]
     });
     this.registerPayload = {
@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
     this.registerPayload.password = this.registerForm.get('password').value;
     this.registerPayload.confirmPassword = this.registerForm.get('confirmPassword').value;
 
-    this.authService.register(this.registerForm.value).subscribe({
+    this.authService.register(this.registerPayload).subscribe({
       next: () => {
         this.router.navigateByUrl('/register-success');
       },
