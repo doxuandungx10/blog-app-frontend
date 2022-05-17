@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RegisterPayload} from '../register-payload';
 import {AuthService} from '../auth.service';
 import {Router} from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -50,10 +51,10 @@ export class RegisterComponent implements OnInit {
 
     this.authService.register(this.registerPayload).subscribe({
       next: () => {
-        this.router.navigateByUrl('/register-success');
       },
       error: error => {
           this.loading = false;
+          this.router.navigateByUrl('/login');
       }
   });
   }

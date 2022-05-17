@@ -5,7 +5,7 @@
         <h1><a href="" class="title"> Spring Blog</a></h1>
       </div> <!-- Title -->
       <div class="col-md-3" *ngIf="authService.isAuthenticated()">
-          <a href="/add-post" class="new-post">Add Post</a>
+          <a href="/add-post" class="new-post btn btn-default">Add Post</a>
           <button class="logout btn btn-default" (click)="logout()">Logout</button>
       </div>
       <div class="col-md-3" *ngIf="!authService.isAuthenticated()">

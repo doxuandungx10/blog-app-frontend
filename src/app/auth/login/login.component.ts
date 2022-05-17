@@ -53,13 +53,14 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.loginPayload).subscribe({
       next: () => {
           // get return url from query parameters or default to home page
-          console.log('login success');
           this.router.navigateByUrl('/home');
+          console.log('login success');
       },
       error: error => {
         this.alertService.error(error);
         console.log('Login failed');
         this.loading = false;
+        // this.router.navigateByUrl('/home');
       }
   });
   }

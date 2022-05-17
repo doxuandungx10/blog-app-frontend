@@ -1,3 +1,4 @@
+<div class="login-container">
 <div class="card" style="height: 500px;">
   <h4 class="card-header">Login</h4>
   <div class="card-body">
@@ -17,16 +18,21 @@
               </div>
           </div>
           <div class="form-group">
-              <button [disabled]="loading" class="btn btn-primary btn-footer">
+              <!-- <button [disabled]="loading" class="btn btn-primary btn-footer">
                   <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                   Login
-              </button>
+              </button> -->
+            <button [disabled]="loading" style="background-color: #66B539 !important; border: #66B539;" class="btn btn-primary btn-footer">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Login 
+            </button>
             </div>
         <div class="form-group">
               <div style="margin: 0px auto; display: flex; justify-content: space-around;">
-                  <p style="margin-top: 7px; font-size: 17px;">Don't have account?</p><a style="font-size: 17px" routerLink="../register" class="btn btn-link">Register here</a>
+                  <p style="margin-top: 7px; font-size: 17px; color:#374148">Don't have account?</p><a style="font-size: 17px; color: #66B539;" routerLink="../register" class="btn btn-link">Register here</a>
               </div>
           </div>
       </form>
   </div>
+</div>
 </div>
