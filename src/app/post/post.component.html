@@ -6,7 +6,10 @@
         <div class="col-md-1"></div>
         <div class="col-md-8">
           <h1 class="post-title">{{post.title}}</h1>
-          <span><p>Author: {{post.username}}</p></span>
+          <span style="display: flex;">
+            <p>Author: </p>
+            <p class="post-author">{{post.username}}</p>
+          </span>
           <hr>
           <p [innerHTML]="post.content"></p>
           <hr>
@@ -20,7 +23,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-8">
           <div class="comment-box-container">
-            <textarea class="comment-box" [(ngModel)]="comment" name="" id="" cols="30" rows="10" placeholder="Add a comment..."></textarea>
+            <textarea class="comment-box" [(ngModel)]="comment" name="" id="commentBox" cols="30" rows="10" placeholder="Add a comment..."></textarea>
             <button class="comment-button" (click)="submitComment()" style="background-color: #66B539; border: #66B539; width: 130px; height: 50px;" class="btn btn-primary btn-footer">
               Comment
             </button>

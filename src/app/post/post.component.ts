@@ -68,6 +68,8 @@ export class PostComponent implements OnInit {
     },(err: any) => {
       console.log('Failure Response');
     })
+
+    this.comment = '';
   }
 
 

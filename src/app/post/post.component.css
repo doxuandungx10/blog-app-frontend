@@ -11,6 +11,10 @@ hr{
     border-width: 0.7px;
     border-color: #D3D3D3;
 }
+.post-author{
+    color: #66B539;
+    margin-left: 10px;
+}
 .comment-section-container{
     margin-top: 50px;
 }
@@ -20,6 +24,7 @@ hr{
 }
 .comment-box-container{
     margin-bottom: 30px;
+    padding-bottom: 30px;
 }
 
 .comment-box{
