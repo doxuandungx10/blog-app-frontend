@@ -11,7 +11,7 @@
         <p [innerHTML]="post.content"></p>
         <div>
           <!-- <a type="button" href="/post/{{post.id}}" class="read-more btn btn-default">Read More</a> -->
-          <button [disabled]="loading" style="background-color: #66B539 !important; border: #66B539;" class="btn btn-primary btn-footer">
+          <button [disabled]="loading" style="background-color: #66B539 !important; border: #66B539; width: 200px;" class="btn btn-primary btn-footer">
             <a href="/post/{{post.id}}" style="background-color: #66B539 !important; color: whitesmoke" class="read-more btn btn-default">Read More</a>
           </button>
         </div>
