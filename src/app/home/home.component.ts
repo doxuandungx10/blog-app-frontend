@@ -9,12 +9,21 @@ import {PostPayload} from '../add-post/post-payload';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  pageCur : number = 0;
+  pageSize : number = 5;
+  totalPages : number ;
 
   posts: Observable<Array<PostPayload>>;
   constructor(private postService: AddPostService) { }
 
   ngOnInit() {
-    this.posts = this.postService.getAllPosts();
+    this.postService.getAllPosts(this.pageCur,this.pageSize).subscribe(data => {
+        this.posts = data['content'];
+        // console.log(data['content']);
+        this.totalPages = data['totalPages'];
+        console.log(this.posts);
+    });
+    
   }
 
 }

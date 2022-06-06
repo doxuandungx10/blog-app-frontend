@@ -15,8 +15,8 @@ export class AddPostService {
     return this.httpClient.post('http://localhost:8080/api/posts/createPost', postPayload);
   }
 
-  getAllPosts(): Observable<Array<PostPayload>>{
-    return this.httpClient.get<Array<PostPayload>>("http://localhost:8080/api/posts/all");
+  getAllPosts(page:number,pageSize:number){
+    return this.httpClient.get<any>("http://localhost:8080/api/posts/all?+page="+page+"&size="+pageSize);
   }
 
   getPost(permaLink: Number):Observable<PostPayload>{
