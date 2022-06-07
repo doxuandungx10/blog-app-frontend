@@ -16,8 +16,8 @@ export class AddPostService {
   }
 
   getAllPosts(page:number,pageSize:number){
-    return this.httpClient.get<any>("http://localhost:8080/api/posts/all?+page="+page+"&size="+pageSize);
-  }
+    return this.httpClient.get<any>("http://localhost:8080/api/posts/all?+page="+page+"&size="+pageSize);}
+
 
   getPost(permaLink: Number):Observable<PostPayload>{
     return this.httpClient.get<PostPayload>('http://localhost:8080/api/posts/get/' + permaLink);
